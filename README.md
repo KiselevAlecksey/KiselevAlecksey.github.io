@@ -5,7 +5,7 @@
     <title>Текстовый процессор</title>
 </head>
 <body>
-<h1>Введите текст для обработки</h1>
+<h1>Введите текст логов для обработки</h1>
 <textarea id="textInput" rows="10" cols="50" placeholder="Введите текст здесь..."></textarea>
 <br>
 
