@@ -17,8 +17,22 @@ public class ParserController {
         return ResponseEntity.ok().body(parserService.parseText(request));
     }
 
+    @RequestMapping(value = "/process-text", method = RequestMethod.OPTIONS)
+    public ResponseEntity<Void> optionsParser() {
+        return ResponseEntity.ok()
+                .header("Access-Control-Allow-Origin", "http://localhost:63342, https://kiselevalecksey.github.io")
+                .header("Access-Control-Allow-Methods", "POST, OPTIONS")
+                .header("Access-Control-Allow-Headers", "Content-Type")
+                .build();
+    }
+
     @GetMapping("/test")
     public ResponseEntity<String> testEndpoint() {
         return ResponseEntity.ok("Сервер работает!");
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.OPTIONS)
+    public ResponseEntity<Void> optionsTest() {
+        return ResponseEntity.ok().build();
     }
 }

@@ -1,4 +1,7 @@
 server:
+  servlet:
+    context-parameters:
+      timeout: 20000
   port: 8080
 spring:
   application:

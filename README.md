@@ -5,12 +5,12 @@
     <title>Текстовый процессор</title>
 </head>
 <body>
-<h1>Введите текст для обработки</h1>
+<h1>Введите текст логов для обработки</h1>
 <textarea id="textInput" rows="10" cols="50" placeholder="Введите текст здесь..."></textarea>
 <br>
 
 <label for="cutoffInput">Введите cutoff:</label>
-<input type="text" id="cutoffInput" placeholder="Введите cutoff (3-12 символов)" required>
+<input type="text" id="cutoffInput" placeholder="Введите cutoff (1-12 символов)" required>
 <br>
 
 <label for="regexInput">Введите regex:</label>
@@ -28,7 +28,7 @@
         const cutoff = document.getElementById('cutoffInput').value;
         const regex = document.getElementById('regexInput').value;
 
-        fetch('http://localhost:8080/api/process-text', {
+        fetch('https://bbae9q2n7ipu3nlkmakl.containers.yandexcloud.net/api/process-text', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,5 +52,11 @@
         });
     });
 </script>
+
+<footer>
+    <p>Контакты:</p>
+    <p>E-mail: <a href="mailto:Kiselev.Alecksey@yandex.ru">Kiselev.Alecksey@yandex.ru</a></p>
+    <p>Telegram: <a href="https://t.me/Kiselev_Alecksey">@Kiselev_Alecksey</a></p>
+</footer>
 </body>
 </html>
