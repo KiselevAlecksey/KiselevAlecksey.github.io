@@ -28,7 +28,7 @@
         const cutoff = document.getElementById('cutoffInput').value;
         const regex = document.getElementById('regexInput').value;
 
-        fetch('https://bbae9q2n7ipu3nlkmakl.containers.yandexcloud.net/', {
+        fetch('https://bbae9q2n7ipu3nlkmakl.containers.yandexcloud.net/api/process-text', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
